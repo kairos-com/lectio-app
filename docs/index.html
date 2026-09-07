@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Política de Privacidad — Lectio</title>
+<meta name="description" content="Qué datos maneja Lectio y cuáles salen de tu dispositivo. Sin cuenta, sin analítica, sin publicidad: tu voz nunca sale del teléfono.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400&display=swap">
+<style>
+  :root {
+    --ground:  #f6f8f4;
+    --surface: #ffffff;
+    --ink:     #191d19;
+    --ink-soft:#4e564f;
+    --ink-mute:#79817a;
+    --rule:    #d8ded6;
+    --rule-soft:#e7ebe4;
+    --olive:   #3a5a40;
+    --olive-soft:#e3ebe2;
+    --f-display:"Newsreader", Georgia, serif;
+    --f-body:"IBM Plex Sans", -apple-system, "Segoe UI", sans-serif;
+    --f-mono:"IBM Plex Mono", ui-monospace, Menlo, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ground:#141815; --surface:#1b201c; --ink:#e8ece7; --ink-soft:#b2bbb3;
+      --ink-mute:#848d85; --rule:#333b35; --rule-soft:#272e28;
+      --olive:#8db392; --olive-soft:#243126;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--ground);
+    color: var(--ink);
+    font-family: var(--f-body);
+    font-size: 16.5px;
+    line-height: 1.62;
+    -webkit-font-smoothing: antialiased;
+  }
+  .page { max-width: 720px; margin: 0 auto; padding: 0 24px 80px; }
+
+  header { padding: 56px 0 26px; border-bottom: 2px solid var(--ink); margin-bottom: 34px; }
+  .eyebrow {
+    font-family: var(--f-mono); font-size: 11px; letter-spacing: .14em;
+    text-transform: uppercase; color: var(--olive); margin: 0 0 14px;
+  }
+  h1 {
+    font-family: var(--f-display); font-weight: 600;
+    font-size: clamp(30px, 5vw, 44px); line-height: 1.08;
+    letter-spacing: -.02em; margin: 0 0 14px; text-wrap: balance;
+  }
+  .updated { font-family: var(--f-mono); font-size: 12.5px; color: var(--ink-mute); margin: 0; }
+  .lede {
+    font-family: var(--f-display); font-size: clamp(17px, 2.2vw, 19px);
+    line-height: 1.5; color: var(--ink-soft); margin: 16px 0 0;
+  }
+
+  h2 {
+    font-family: var(--f-display); font-weight: 600;
+    font-size: clamp(21px, 3vw, 27px); line-height: 1.18;
+    letter-spacing: -.015em; margin: 40px 0 10px; text-wrap: balance;
+  }
+  p { margin: 0 0 14px; }
+  ul { margin: 0 0 14px; padding-left: 20px; }
+  li { margin-bottom: 7px; }
+  li::marker { color: var(--olive); }
+  strong { font-weight: 600; color: var(--ink); }
+  code { font-family: var(--f-mono); font-size: .84em; background: var(--olive-soft); padding: .14em .4em; border-radius: 3px; }
+  a { color: var(--olive); text-underline-offset: 2px; }
+  :focus-visible { outline: 2px solid var(--olive); outline-offset: 2px; }
+
+  .summary { background: var(--olive-soft); border-radius: 10px; padding: 20px 24px; margin: 26px 0 0; }
+  .summary ul { margin: 0; }
+
+  .tbl { overflow-x: auto; margin: 16px 0; }
+  table { border-collapse: collapse; width: 100%; min-width: 460px; font-size: 14.5px; }
+  th {
+    text-align: left; font-family: var(--f-mono); font-size: 10.5px;
+    letter-spacing: .09em; text-transform: uppercase; color: var(--ink-mute);
+    font-weight: 400; padding: 0 14px 8px 0; border-bottom: 1px solid var(--rule);
+  }
+  td { padding: 10px 14px 10px 0; border-bottom: 1px solid var(--rule-soft); vertical-align: top; color: var(--ink-soft); }
+  td:first-child { white-space: nowrap; }
+
+  .contact { background: var(--surface); border: 1px solid var(--rule); border-radius: 10px; padding: 18px 22px; margin-top: 18px; }
+  .contact a { font-family: var(--f-mono); font-size: 15px; }
+
+  .langbar { display: flex; gap: 10px; margin: 30px 0 0; font-family: var(--f-mono); font-size: 12px; }
+  .langbar a { padding: 5px 12px; border: 1px solid var(--rule); border-radius: 999px; text-decoration: none; }
+
+  hr.divider { border: 0; border-top: 2px solid var(--ink); margin: 64px 0 0; }
+  footer { margin-top: 44px; padding-top: 18px; border-top: 1px solid var(--rule); font-size: 13.5px; color: var(--ink-mute); }
+</style>
+</head>
+<body>
+<div class="page">
+
+<header>
+  <p class="eyebrow">Lectio</p>
+  <h1 id="es">Política de Privacidad</h1>
+  <p class="updated">Última actualización: 3 de septiembre de 2026</p>
+  <p class="lede">Lectio es una aplicación para aprender idiomas leyendo libros en voz alta. Esta política describe exactamente qué datos maneja la app y cuáles salen del dispositivo.</p>
+  <div class="langbar"><a href="#es">Español</a><a href="#en">English</a></div>
+</header>
+
+<div class="summary">
+  <ul>
+    <li><strong>No hay cuenta, ni login, ni perfil.</strong> Lectio no te pide correo, nombre ni contraseña.</li>
+    <li><strong>No hay analítica, ni publicidad, ni rastreadores</strong> de terceros de ningún tipo.</li>
+    <li><strong>Tu voz nunca sale del teléfono.</strong> El reconocimiento de voz corre completo en el dispositivo.</li>
+    <li><strong>Tu progreso vive solo en tu teléfono.</strong> No hay servidor propio ni copia en la nube.</li>
+  </ul>
+</div>
+
+<h2>Micrófono y grabaciones</h2>
+<p>Lectio pide permiso de micrófono para escucharte leer en voz alta y evaluar tu pronunciación y fluidez.</p>
+<ul>
+  <li>La grabación se guarda como archivo temporal en la caché privada de la app.</li>
+  <li>El reconocimiento de voz se ejecuta <strong>localmente</strong>, con modelos descargados a tu dispositivo. El audio <strong>no se transmite a ningún servidor</strong>, ni al nuestro ni a terceros.</li>
+  <li>Las grabaciones de repaso se sobrescriben: cada palabra reutiliza un mismo archivo, de modo que solo se conserva tu último intento.</li>
+  <li>Podés borrar todas las grabaciones desinstalando la app o limpiando su caché desde los ajustes del sistema.</li>
+</ul>
+
+<h2>Datos guardados en tu dispositivo</h2>
+<p>Todo esto se almacena localmente y nunca se envía a ningún lado:</p>
+<ul>
+  <li>Libros que importaste o descargaste, y tu posición de lectura en cada uno.</li>
+  <li>Palabras en repaso, su progreso e historial.</li>
+  <li>Logros, rachas y estadísticas de lectura.</li>
+  <li>Preferencias: idioma de la interfaz, voz, velocidad, umbrales de dificultad.</li>
+  <li>Modelos de voz descargados.</li>
+</ul>
+
+<h2>Conexiones a servicios de terceros</h2>
+<p>Lectio se conecta a estos servicios. Como en cualquier petición web, cada uno recibe tu dirección IP; ninguno recibe identificadores nuestros porque la app no genera ninguno.</p>
+<div class="tbl">
+<table>
+  <thead><tr><th>Servicio</th><th>Cuándo</th><th>Qué recibe</th></tr></thead>
+  <tbody>
+    <tr><td><code>gutendex.com</code></td><td>Al buscar libros en Descubrir</td><td>Tu término de búsqueda y filtros</td></tr>
+    <tr><td><code>gutenberg.org</code></td><td>Al descargar un libro</td><td>El identificador del libro pedido</td></tr>
+    <tr><td><code>api.dictionaryapi.dev</code></td><td>Al pedir la definición de una palabra</td><td><strong>La palabra que tocaste</strong></td></tr>
+    <tr><td><code>github.com</code></td><td>Al descargar un modelo de voz</td><td>El identificador del modelo pedido</td></tr>
+  </tbody>
+</table>
+</div>
+<p>No controlamos estos servicios y no compartimos nada con ellos más allá de lo listado. Si preferís no usarlos, podés importar libros <code>.epub</code> desde tu propio dispositivo y saltarte Descubrir y el diccionario por completo.</p>
+
+<h2>Menores de edad</h2>
+<p>Lectio no está dirigida a menores de 13 años y no recolecta a sabiendas datos de ellos. Como la app no recolecta datos personales de nadie, tampoco lo hace de menores.</p>
+
+<h2>Cómo borrar tus datos</h2>
+<p>Desinstalar Lectio elimina todo: libros, progreso, grabaciones y modelos descargados. No queda nada en ningún servidor porque nunca hubo nada en ningún servidor. Desde Ajustes también podés borrar modelos de voz individuales para liberar espacio.</p>
+
+<h2>Cambios a esta política</h2>
+<p>Si esta política cambia, la fecha de arriba se actualiza. Los cambios relevantes se avisarán dentro de la app.</p>
+
+<h2>Contacto</h2>
+<div class="contact">
+  <p style="margin:0">Dudas sobre privacidad: <a href="mailto:kairos.lectio@gmail.com">kairos.lectio@gmail.com</a></p>
+</div>
+
+<hr class="divider">
+
+<header style="border-bottom:none; padding-top:34px; margin-bottom:0">
+  <p class="eyebrow">Lectio</p>
+  <h1 id="en">Privacy Policy</h1>
+  <p class="updated">Last updated: September 3, 2026</p>
+  <p class="lede">Lectio is an app for learning languages by reading books aloud. This policy describes exactly what data the app handles and what leaves your device.</p>
+</header>
+
+<div class="summary">
+  <ul>
+    <li><strong>No account, no login, no profile.</strong> Lectio never asks for an email, name, or password.</li>
+    <li><strong>No analytics, no ads, no third-party trackers</strong> of any kind.</li>
+    <li><strong>Your voice never leaves your phone.</strong> Speech recognition runs entirely on-device.</li>
+    <li><strong>Your progress lives only on your phone.</strong> There is no server of ours and no cloud backup.</li>
+  </ul>
+</div>
+
+<h2>Microphone and recordings</h2>
+<p>Lectio requests microphone access to listen while you read aloud and score your pronunciation and reading fluency.</p>
+<ul>
+  <li>Recordings are written as temporary files in the app's private cache.</li>
+  <li>Speech recognition runs <strong>locally</strong>, using models downloaded to your device. Audio is <strong>never transmitted to any server</strong>, ours or anyone else's.</li>
+  <li>Review recordings are overwritten: each word reuses a single file, so only your most recent attempt is kept.</li>
+  <li>You can delete all recordings by uninstalling the app or clearing its cache from system settings.</li>
+</ul>
+
+<h2>Data stored on your device</h2>
+<p>All of this is stored locally and never transmitted:</p>
+<ul>
+  <li>Books you imported or downloaded, and your reading position in each.</li>
+  <li>Review words, their progress and history.</li>
+  <li>Achievements, streaks, and reading statistics.</li>
+  <li>Preferences: interface language, voice, speed, difficulty thresholds.</li>
+  <li>Downloaded speech models.</li>
+</ul>
+
+<h2>Third-party connections</h2>
+<p>Lectio connects to these services. As with any web request, each receives your IP address; none receives an identifier from us, because the app generates none.</p>
+<div class="tbl">
+<table>
+  <thead><tr><th>Service</th><th>When</th><th>What it receives</th></tr></thead>
+  <tbody>
+    <tr><td><code>gutendex.com</code></td><td>Searching books in Discover</td><td>Your search term and filters</td></tr>
+    <tr><td><code>gutenberg.org</code></td><td>Downloading a book</td><td>The requested book identifier</td></tr>
+    <tr><td><code>api.dictionaryapi.dev</code></td><td>Requesting a word definition</td><td><strong>The word you tapped</strong></td></tr>
+    <tr><td><code>github.com</code></td><td>Downloading a speech model</td><td>The requested model identifier</td></tr>
+  </tbody>
+</table>
+</div>
+<p>We do not control these services and share nothing with them beyond what is listed. If you prefer not to use them, you can import <code>.epub</code> files from your own device and skip Discover and the dictionary entirely.</p>
+
+<h2>Children</h2>
+<p>Lectio is not directed at children under 13 and does not knowingly collect their data. Since the app collects no personal data from anyone, it collects none from children.</p>
+
+<h2>Deleting your data</h2>
+<p>Uninstalling Lectio removes everything: books, progress, recordings, and downloaded models. Nothing remains on any server, because nothing was ever on a server. You can also delete individual speech models from Settings to free space.</p>
+
+<h2>Changes to this policy</h2>
+<p>If this policy changes, the date above is updated. Material changes will be announced in-app.</p>
+
+<h2>Contact</h2>
+<div class="contact">
+  <p style="margin:0">Privacy questions: <a href="mailto:kairos.lectio@gmail.com">kairos.lectio@gmail.com</a></p>
+</div>
+
+<footer>
+  Lectio · <a href="https://github.com/benjamin-dona/lectio-app">github.com/benjamin-dona/lectio-app</a>
+</footer>
+
+</div>
+</body>
+</html>
