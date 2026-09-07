@@ -38,7 +38,7 @@ el significado a quien recién empieza, la definición es a lo que crece con el
 tiempo, y el AFI le sirve a una app que corrige pronunciación.
 
 Se generan con
-[`tools/build-dictionary.mjs`](https://github.com/benjamin-dona/lectio) del
+[`tools/build-dictionary.mjs`](https://github.com/kairos-com/lectio-app) del
 repositorio de la app, que convierte el formato `dictd` de FreeDict a este
 JSON. Convertirlo una vez acá le ahorra al teléfono descomprimir 10 MB de texto
 y recorrerlos linealmente en cada toque.
